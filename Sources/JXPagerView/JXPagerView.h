@@ -93,6 +93,10 @@
  是否允许当前列表自动显示或隐藏列表是垂直滚动指示器。YES：悬浮的headerView滚动到顶部开始滚动列表时，就会显示，反之隐藏。NO：内部不会处理列表的垂直滚动指示器。默认为：YES。
  */
 @property (nonatomic, assign) BOOL automaticallyDisplayListVerticalScrollIndicator;
+/**
+ 刷新列表 是否重置mainTableView contentOffset  YES:不重置  NO:重置 。 默认NO
+ */
+@property (nonatomic, assign) BOOL isReloadDataNotContentOffset;
 
 - (instancetype)initWithDelegate:(id<JXPagerViewDelegate>)delegate;
 - (instancetype)initWithDelegate:(id<JXPagerViewDelegate>)delegate listContainerType:(JXPagerListContainerType)type NS_DESIGNATED_INITIALIZER;

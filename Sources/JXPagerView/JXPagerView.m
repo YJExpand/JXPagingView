@@ -81,7 +81,9 @@
 
     [self refreshTableHeaderView];
     if (self.pinSectionHeaderVerticalOffset != 0 && self.mainTableView.contentOffset.y > self.pinSectionHeaderVerticalOffset) {
-        self.mainTableView.contentOffset = CGPointZero;
+        if(!self.isReloadDataNotContentOffset){
+            self.mainTableView.contentOffset = CGPointZero;
+        }
     }
     [self.mainTableView reloadData];
     [self.listContainerView reloadData];
